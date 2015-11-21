@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+            <title>AngularJS Instagram Hashtag</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/controller.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-semver="3.3.2" data-require="bootstrap@*" />
+
+            <style>
+            body{font-family: verdana;}
+*{margin:0;
+ padding:0;
+list-style:none;
+}
+		body{
+			font-family:arial,sans-serif;
+			padding:1em;
+                  background: #ccc;
+
+		}
+h1{margin: 2%;color: #3a3}
+#container { margin-top: 70px; text-align: center; }
+#container  img{ float: left; width: 170px; display: inline-block; position: relative; margin-right: 20px; margin-bottom: 12px; }
+#photos img{ border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+           </style>
+ 	</head>
+<body style="margin-left: 10%" ng-app="appInstagram">
+<h1></h1>
+
+		<div style="height:20px;">
+		</div>
+
+            <center>
+                  <img src="https://angularjs.org/img/AngularJS-large.png"/>
+			<h1>Instagram Hashtag <b>#{{searchString}}</b></h1>
+			<div class="form-inline">
+			<div class="form-group">
+			<input type="text" id="query" class="form-control" style="width:500px;" ng-model="searchString"/> &nbsp; &nbsp;
+			<button class="btn-primary btn-primary form-control" id="searchbtn">Search</button>
+			</div>
+		</div>
+            </center>
+
+<div id="container" ng-controller="mainCtrl">
+
+<div id="photos">
+
+   <div ng-repeat="item in example.items">
+
+     <a ng-href="{{item.link}}" target="_blank"><img ng-src="{{item.images.low_resolution.url}}" class="instagram-image"></a>
+
+   <div>
+
+</div>
+		
+	</body>
+</html>
